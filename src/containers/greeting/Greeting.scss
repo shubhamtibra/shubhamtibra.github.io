@@ -32,6 +32,16 @@
 .button-greeting-div {
   display: flex;
   margin-top: 20px;
+  gap: 40px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.button-greeting-div > div {
+  flex: 0 1;
+}
+.download-link-button {
+  text-decoration: none;
+  flex: 0 1;
 }
 
 .greeting-text {

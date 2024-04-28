@@ -34,12 +34,12 @@
   margin: 0;
   font-size: 28px;
   font-weight: 700;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  height: 27px;
+  white-space: initial;
+  min-height: fit-content;
 }
-
+.education-text-details {
+  min-width: fit-content;
+}
 .education-roundedimg {
   object-fit: cover;
   margin-right: 2rem;
@@ -97,7 +97,7 @@
   }
   .education-text-school {
     font-size: 20px;
-    height: 23px;
+    min-height: 23px;
   }
   .education-text-duration {
     font-size: 16px;
