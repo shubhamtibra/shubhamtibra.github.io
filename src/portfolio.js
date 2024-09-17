@@ -110,7 +110,7 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Indian Institute of Information Technology, Kharagpur",
+      schoolName: "Indian Institute of Technology, Kharagpur",
       logo: require("./assets/images/iitkgp.jpg"),
       subHeader: "Master of Science in Mathematics and Computer Science",
       duration: "2014 - 2019",
