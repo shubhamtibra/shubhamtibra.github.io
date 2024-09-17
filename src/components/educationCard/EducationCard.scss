@@ -34,10 +34,7 @@
   margin: 0;
   font-size: 28px;
   font-weight: 700;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  height: 27px;
+  white-space: initial;
 }
 
 .education-roundedimg {
