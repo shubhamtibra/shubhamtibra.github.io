@@ -1,11 +1,11 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
-import {blogSection} from "../../portfolio";
-import {Fade} from "react-reveal";
+import { blogSection } from "../../portfolio";
+import { Fade } from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 export default function Blogs() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
   const [mediumBlogs, setMediumBlogs] = useState([]);
   function setMediumBlogsFunction(array) {
     setMediumBlogs(array);
@@ -15,8 +15,8 @@ export default function Blogs() {
     return typeof html === "string"
       ? html
           .split("p>")
-          .filter(el => !el.includes(">"))
-          .map(el => el.replace("</", ".").replace("<", ""))
+          .filter((el) => !el.includes(">"))
+          .map((el) => el.replace("</", ".").replace("<", ""))
           .join(" ")
       : NaN;
   }
@@ -24,17 +24,17 @@ export default function Blogs() {
     if (blogSection.displayMediumBlogs === "true") {
       const getProfileData = () => {
         fetch("/blogs.json")
-          .then(result => {
+          .then((result) => {
             if (result.ok) {
               return result.json();
             }
           })
-          .then(response => {
+          .then((response) => {
             setMediumBlogsFunction(response.items);
           })
           .catch(function (error) {
             console.error(
-              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
+              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`,
             );
             setMediumBlogsFunction("Error");
             blogSection.displayMediumBlogs = "false";
@@ -72,7 +72,7 @@ export default function Blogs() {
                         url: blog.url,
                         image: blog.image,
                         title: blog.title,
-                        description: blog.description
+                        description: blog.description,
                       }}
                     />
                   );
@@ -85,7 +85,7 @@ export default function Blogs() {
                       blog={{
                         url: blog.link,
                         title: blog.title,
-                        description: extractTextContent(blog.content)
+                        description: extractTextContent(blog.content),
                       }}
                     />
                   );

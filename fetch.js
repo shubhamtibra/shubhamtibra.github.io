@@ -14,7 +14,7 @@ const ERR = {
   requestFailed:
     "The request to GitHub didn't succeed. Check if GitHub token in your .env file is correct.",
   requestFailedMedium:
-    "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
+    "The request to Medium didn't succeed. Check if Medium username in your .env file is correct.",
 };
 if (USE_GITHUB_DATA === "true") {
   if (GITHUB_USERNAME === undefined) {
@@ -54,7 +54,7 @@ if (USE_GITHUB_DATA === "true") {
       }
     }
 }
-`
+`,
   });
   const default_options = {
     hostname: "api.github.com",
@@ -63,11 +63,11 @@ if (USE_GITHUB_DATA === "true") {
     method: "POST",
     headers: {
       Authorization: `Bearer ${GITHUB_TOKEN}`,
-      "User-Agent": "Node"
-    }
+      "User-Agent": "Node",
+    },
   };
 
-  const req = https.request(default_options, res => {
+  const req = https.request(default_options, (res) => {
     let data = "";
 
     console.log(`statusCode: ${res.statusCode}`);
@@ -75,7 +75,7 @@ if (USE_GITHUB_DATA === "true") {
       throw new Error(ERR.requestFailed);
     }
 
-    res.on("data", d => {
+    res.on("data", (d) => {
       data += d;
     });
     res.on("end", () => {
@@ -86,7 +86,7 @@ if (USE_GITHUB_DATA === "true") {
     });
   });
 
-  req.on("error", error => {
+  req.on("error", (error) => {
     throw error;
   });
 
@@ -100,10 +100,10 @@ if (MEDIUM_USERNAME !== undefined) {
     hostname: "api.rss2json.com",
     path: `/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USERNAME}`,
     port: 443,
-    method: "GET"
+    method: "GET",
   };
 
-  const req = https.request(options, res => {
+  const req = https.request(options, (res) => {
     let mediumData = "";
 
     console.log(`statusCode: ${res.statusCode}`);
@@ -111,7 +111,7 @@ if (MEDIUM_USERNAME !== undefined) {
       throw new Error(ERR.requestMediumFailed);
     }
 
-    res.on("data", d => {
+    res.on("data", (d) => {
       mediumData += d;
     });
     res.on("end", () => {
@@ -122,7 +122,7 @@ if (MEDIUM_USERNAME !== undefined) {
     });
   });
 
-  req.on("error", error => {
+  req.on("error", (error) => {
     throw error;
   });
 
