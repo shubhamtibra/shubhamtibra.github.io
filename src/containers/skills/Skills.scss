@@ -4,6 +4,9 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .skills-text-div {

@@ -6,26 +6,28 @@
   font-size: 3rem;
   margin-bottom: 0px;
   margin-top: 0px;
+  color: skyblue;
   text-align: center;
 }
 
 .software-skill-inline {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   margin-right: 20px;
   margin-bottom: 20px;
+  width: 4.5rem;
 }
 
-.software-skill-inline > i {
-  color: $subTitle;
-}
-
-.software-skill-inline > i:hover {
+.software-skill-inline > .iconify:hover {
   color: $skillsColor;
 }
+
 .software-skill-inline > p {
-  color: $subTitle;
-  font-size: 10px;
+  color: white;
+  font-size: 14px;
 }
-.software-skill-inline > i:hover ~ p {
+.software-skill-inline > .iconify:hover ~ p {
   color: $skillsColor;
 }
