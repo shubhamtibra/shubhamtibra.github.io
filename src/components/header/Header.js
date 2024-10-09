@@ -1,18 +1,17 @@
 import React, { useContext } from "react";
 import Headroom from "react-headroom";
-import "./Header.scss";
-import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import {
-  greeting,
-  workExperiences,
-  skillsSection,
-  openSource,
-  blogSection,
-  talkSection,
   achievementSection,
+  blogSection,
+  greeting,
+  openSource,
   resumeSection,
+  skillsSection,
+  talkSection,
+  workExperiences,
 } from "../../portfolio";
+import "./Header.scss";
 
 function Header() {
   const { isDark } = useContext(StyleContext);
@@ -88,12 +87,6 @@ function Header() {
           )}
           <li>
             <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
           </li>
         </ul>
       </header>

@@ -3,6 +3,34 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
+import { DiRedis } from "react-icons/di";
+import {
+  FaAws,
+  FaDocker,
+  FaGit,
+  FaJava,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa";
+import {
+  SiCplusplus,
+  SiFlask,
+  SiGraphql,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiPandas,
+  SiPlaywright,
+  SiPostgresql,
+  SiPytorch,
+  SiRabbitmq,
+  SiRedux,
+  SiSequelize,
+  SiTailwindcss,
+  SiTensorflow,
+} from "react-icons/si";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
 // Splash Screen
@@ -23,7 +51,7 @@ const greeting = {
   username: "shubhamtibra",
   title: "Hi all, I'm Subham Tibra",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer and Machine learning enthusiast 🚀 having experience building Web applications with / Reactjs / Nodejs and Python",
+    "A passionate Full Stack Software Developer and Machine learning enthusiast 🚀 having experience building end-to-end web apps"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1SgeK3DRtiBlGa5EY-Yt22_L_kF-IUUiI/view?usp=sharing", // Set to empty to hide the button
@@ -36,12 +64,6 @@ const socialMediaLinks = {
   github: "https://github.com/shubhamtibra",
   linkedin: "https://www.linkedin.com/in/shubham-tibra-7b85a5106/",
   gmail: "shubh.tibra@gmail.com",
-  //gitlab: "https://gitlab.com/saadpasta",
-  //facebook: "https://www.facebook.com/saad.pasta7",
-  //medium: "https://medium.com/@saadpasta",
-  //stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
   display: true, // Set true to display this section, defaults to false
 };
 
@@ -50,15 +72,17 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I do",
   subTitle:
-    "Polyglot fullstack developer | Interested in learning new technologies",
+    "Polyglot fullstack developer interested in learning new technologies",
   skills: [
     emoji(
-      "⚡ Develop highly scalable backend system | DB Schema design | Query optimisation | Scalability",
+      "⚡ I Develop scalable backend system while writing maintainable and efficient code"
     ),
     emoji(
-      "⚡ Gather customer requirements | Design the system | Implement | Rollout",
+      "⚡ I love gathering customer requirements, designing it into a software, implement it and deliver the promise"
     ),
-    emoji("⚡ Experience with AWS | Github Workflows"),
+    emoji(
+      "⚡ Experience with CI/CD tools such as AWS, Github Workflows, Docker and Terraform"
+    ),
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -67,39 +91,121 @@ https://fontawesome.com/icons?d=gallery */
   softwareSkills: [
     {
       skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js",
-    },
-    {
-      skillName: "Reactjs",
-      fontAwesomeClassname: "fab fa-react",
-    },
-    {
-      skillName: "Nodejs",
-      fontAwesomeClassname: "fab fa-node",
-    },
-    {
-      skillName: "MySQL/Postgres/MongoDB",
-      fontAwesomeClassname: "fas fa-database",
-    },
-    {
-      skillName: "AWS",
-      fontAwesomeClassname: "fab fa-aws",
+
+      reactIcon: SiJavascript,
     },
     {
       skillName: "Python",
-      fontAwesomeClassname: "fab fa-python",
+
+      reactIcon: FaPython,
     },
     {
-      skillName: "Docker",
-      fontAwesomeClassname: "fab fa-docker",
+      skillName: "Nodejs",
+
+      reactIcon: FaNodeJs,
     },
     {
       skillName: "Java",
-      fontAwesomeClassname: "fab fa-java",
+
+      reactIcon: FaJava,
     },
     {
+      skillName: "C++",
+
+      reactIcon: SiCplusplus,
+    },
+    {
+      skillName: "MySQL",
+
+      reactIcon: SiMysql,
+    },
+    {
+      skillName: "PostgreSQL",
+
+      reactIcon: SiPostgresql,
+    },
+    {
+      skillName: "MongoDB",
+
+      reactIcon: SiMongodb,
+    },
+    {
+      skillName: "Redis",
+      reactIcon: DiRedis,
+    },
+    {
+      skillName: "RabbitMQ",
+      reactIcon: SiRabbitmq,
+    },
+    {
+      skillName: "Reactjs",
+
+      reactIcon: FaReact,
+    },
+    {
+      skillName: "NextJS",
+
+      reactIcon: SiNextdotjs,
+    },
+    {
+      skillName: "ReduxJS",
+      reactIcon: SiRedux,
+    },
+    {
+      skillName: "GraphQL",
+
+      reactIcon: SiGraphql,
+    },
+    {
+      skillName: "AWS",
+
+      reactIcon: FaAws,
+    },
+
+    {
+      skillName: "Docker",
+
+      reactIcon: FaDocker,
+    },
+
+    {
       skillName: "Git",
-      fontAwesomeClassname: "fab fa-git",
+
+      reactIcon: FaGit,
+    },
+    {
+      skillName: "Tensorflow",
+
+      reactIcon: SiTensorflow,
+    },
+    {
+      skillName: "Pandas",
+
+      reactIcon: SiPandas,
+    },
+    {
+      skillName: "Pytorch",
+
+      reactIcon: SiPytorch,
+    },
+    {
+      skillName: "Flask",
+
+      reactIcon: SiFlask,
+    },
+    {
+      skillName: "Tailwindcss",
+
+      reactIcon: SiTailwindcss,
+    },
+    {
+      skillName: "Playwright",
+
+      reactIcon: SiPlaywright,
+    },
+    {
+      skillName: "Sequelize",
+      reactIcon: SiSequelize,
     },
   ],
   display: true, // Set false to hide this section, defaults to true
@@ -116,10 +222,6 @@ const educationInfo = {
       subHeader: "Master of Science in Mathematics and Computer Science",
       duration: "2014 - 2019",
       desc: "Graduated with Honors with 8.0 CGPA",
-      // descBullets: [
-      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      // ]
     },
   ],
 };
@@ -130,11 +232,23 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "React", //Insert stack or technology you have experience in
-      progressPercentage: "90%", //Insert relative proficiency in percentage
+      Stack: "ReactJS and NextJS", //Insert stack or technology you have experience in
+      progressPercentage: "100%", //Insert relative proficiency in percentage
     },
     {
-      Stack: "Backend with Nodejs/Python",
+      Stack: "Nodejs and Python",
+      progressPercentage: "100%",
+    },
+    {
+      Stack: "Databases (including design, optimization and caching)",
+      progressPercentage: "100%",
+    },
+    {
+      Stack: "Message Queues and Task Queues",
+      progressPercentage: "90%",
+    },
+    {
+      Stack: "GraphQL",
       progressPercentage: "100%",
     },
     {
@@ -237,34 +351,10 @@ const achievementSection = {
     {
       title: "Employee of the quarter",
       subtitle: "Employee of the quarter three times in a row.",
-      // image: require("./assets/images/codeInLogo.webp"),
-      // imageAlt: "Google Code-In Logo",
-      // footerLink: [
-      //   {
-      //     name: "Certification",
-      //     url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-      //   },
-      //   {
-      //     name: "Award Letter",
-      //     url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-      //   },
-      //   {
-      //     name: "Google Code-in Blog",
-      //     url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-      //   }
-      //]
     },
     {
       title: "JEE Advanced",
       subtitle: "General rank of 2065 among 1.5 million students.",
-      // image: require("./assets/images/googleAssistantLogo.webp"),
-      // imageAlt: "Google Assistant Action Logo",
-      // footerLink: [
-      //   {
-      //     name: "View Google Assistant Action",
-      //     url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-      //   }
-      // ]
     },
   ],
   display: true, // Set false to hide this section, defaults to true
@@ -299,7 +389,7 @@ const blogSection = {
 const talkSection = {
   title: "TALKS",
   subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅",
+    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
   ),
 
   talks: [
@@ -353,22 +443,22 @@ const twitterDetails = {
 const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
-  illustration,
+  achievementSection,
+  bigProjects,
+  blogSection,
+  contactInfo,
+  educationInfo,
   greeting,
+  illustration,
+  isHireable,
+  openSource,
+  podcastSection,
+  resumeSection,
+  skillsSection,
   socialMediaLinks,
   splashScreen,
-  skillsSection,
-  educationInfo,
-  techStack,
-  workExperiences,
-  openSource,
-  bigProjects,
-  achievementSection,
-  blogSection,
   talkSection,
-  podcastSection,
-  contactInfo,
+  techStack,
   twitterDetails,
-  isHireable,
-  resumeSection,
+  workExperiences,
 };

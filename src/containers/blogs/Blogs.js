@@ -34,7 +34,7 @@ export default function Blogs() {
           })
           .catch(function (error) {
             console.error(
-              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`,
+              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
             );
             setMediumBlogsFunction("Error");
             blogSection.displayMediumBlogs = "false";

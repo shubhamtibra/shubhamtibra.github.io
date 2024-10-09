@@ -1,7 +1,6 @@
 import React from "react";
-import "./SoftwareSkill.scss";
 import { skillsSection } from "../../portfolio";
-import CustomSkillIcon from "../customSkillIcon/CustomSkillIcon";
+import "./SoftwareSkill.scss";
 
 export default function SoftwareSkill() {
   return (
@@ -15,12 +14,9 @@ export default function SoftwareSkill() {
                 className="software-skill-inline"
                 name={skills.skillName}
               >
-                {skills.customIcon ? (
-                  <CustomSkillIcon skillName={skills.skillName} />
-                ) : (
-                  <i className={skills.fontAwesomeClassname}></i>
-                )}
-                <p>{skills.skillName}</p>
+                {<skills.reactIcon className="iconify" />}
+
+                <p className="skill-name">{skills.skillName}</p>
               </li>
             );
           })}

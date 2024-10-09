@@ -32,7 +32,7 @@ export default function Podcast() {
           {podcastSection.podcast.map((podcastLink, i) => {
             if (!podcastLink) {
               console.log(
-                `Podcast link for ${podcastSection.title} is missing`,
+                `Podcast link for ${podcastSection.title} is missing`
               );
             }
             return (
